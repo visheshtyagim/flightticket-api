@@ -1,0 +1,8 @@
+// Get Available Seats
+curl -XGET "http://localhost:8080/getAvailableSeats?flightNumber=abc"
+
+// Schedule flight
+curl -XPOST "http://localhost:8080/addFlight" -H 'Content-Type:application/json' -d '{"flightNumber":"abc","noOfSeats":20}'
+
+// Book ticket
+curl -XPOST "http://localhost:8080/bookSeat" -H 'Content-Type:application/json' -d '{"flightNumber":"abc","userName":"visheshtyagi"}'
